@@ -1,3 +1,18 @@
+Metadata-Version: 2.4
+Name: openstack-vm-lifecycle-api
+Version: 0.1.0
+Summary: REST API for OpenStack-like VM lifecycle management (assessment PoC).
+Author: Assessment Candidate
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.110
+Requires-Dist: uvicorn[standard]>=0.27
+Requires-Dist: pydantic>=2.6
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: httpx>=0.26; extra == "dev"
+Requires-Dist: ruff>=0.4; extra == "dev"
+
  ## OpenStack VM Lifecycle REST API (Mockable PoC)
  
  Proof-of-concept REST API for managing an OpenStack-like VM lifecycle (create/start/stop/reboot/resize/delete). This is intentionally **mockable** and runs locally without any OpenStack dependencies, while keeping a structure that can be extended to a real OpenStack driver later.
