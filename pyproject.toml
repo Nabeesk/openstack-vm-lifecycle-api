@@ -1,0 +1,30 @@
+ [project]
+ name = "openstack-vm-lifecycle-api"
+ version = "0.1.0"
+description = "REST API for OpenStack-like VM lifecycle management (assessment PoC)."
+ readme = "README.md"
+ requires-python = ">=3.10"
+ authors = [{ name = "Assessment Candidate" }]
+ dependencies = [
+   "fastapi>=0.110",
+   "uvicorn[standard]>=0.27",
+   "pydantic>=2.6",
+ ]
+ 
+ [project.optional-dependencies]
+ dev = [
+   "pytest>=8.0",
+   "httpx>=0.26",
+   "ruff>=0.4",
+ ]
+ 
+ [tool.pytest.ini_options]
+ testpaths = ["tests"]
+ 
+ [tool.ruff]
+ line-length = 100
+ target-version = "py310"
+ 
+ [tool.ruff.lint]
+ select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008"]
